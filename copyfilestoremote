@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 22/10/20
+# Descripton: Script to transfer file to remote host
+# Modified: 22/10/20
+
+
+
+for HOST in shwet-Ideapad-Z570
+
+
+do
+
+
+	scp /home/shwetraj/Real-Life-Scripts/pull-error $HOST:/var/tmp
+
+
+done
+
+

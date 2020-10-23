@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 23/10/20
+# Description: This script will send syslog file through email to administrator
+# Modified: 23/10/20
+
+#This script will work only if your system environment have mail relay server installed. 
+
+
+systems="rshwet14@gmail.com,rajshwet07@gmail.com"
+
+if [ -s /tmp/filtered-messages ]
+
+       then
+
+       cat /tmp/filtered-messages | sort | uniq | mail -s "CHECK: Syslog errors" $systems
+
+       rm /tmp/filtered-messages
+
+       else
+
+       fi

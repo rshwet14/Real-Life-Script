@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Author: Shwet Raj
+#Date: 21/10/20
+#description: Script for assing write permission to a given file
+#Modified: 21/10/20
+
+for i in roy*
+
+do
+ 
+   echo Assigning write permission to $i
+
+   chmod a+w $i
+   sleep 1
+done
+

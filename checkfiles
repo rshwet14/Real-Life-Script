@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 22/10/20
+# Descripton: Script to check given files are available in the system or not
+# Modified: 22/10/20
+
+
+# Sometimes we need to verify that certain files or essential files are availabe on the system or not especially 
+# if we are working on different system.
+# So it's a alwayas a good practice to check important files available or not.
+
+echo Enter the absolute path of the file name you are looking for:
+echo
+read FILES
+echo
+
+for file in $FILES
+
+do
+ 
+  if [ ! -e $file ]
+  then
+  echo $file do not exist!
+  else
+      echo File Exist!
+
+
+  fi
+
+done
+
+

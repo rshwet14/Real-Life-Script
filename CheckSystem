@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 8/10/2020
+# Description: Writing admin command script for checking system health or analysing system performance.
+# Modified Date: 8/10/2020
+
+echo
+
+echo This script will run some basic administrative commands
+echo
+
+top | head -10
+echo
+
+df -h
+echo
+
+free -m
+echo
+
+uptime
+echo
+
+iostat
+echo
+
+echo END OF SCRIPT

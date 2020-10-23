@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 22/10/20
+# Descripton: Script to rename all filename with .txt extention to .none
+# Modified: 22/10/20
+
+for filename in *.txt
+do
+   mv $filename ${filename%.txt}.none
+
+done

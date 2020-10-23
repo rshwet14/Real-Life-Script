@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 22/10/20
+# Description: This script is used find out the number of user logged in today.
+# Modified: 22/10/20
+
+today=`date | awk '{print $1,$2,$3}'`
+last | grep "$today" | awk '{print $1}'
+#last | grep "$today"

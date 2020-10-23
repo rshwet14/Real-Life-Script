@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#Author: Shwet Raj
+#Date: 21/10/20
+#Description: Script to check the multiple remote host servers Connectivity.
+#Modified: 21/10/20
+
+IPLIST="/home/shwetraj/IPLIST"
+for ip in $(cat $IPLIST)
+do
+   ping -c1 $ip &> /dev/null
+   if [ $? -eq 0 ]
+   then
+   echo $ip ping passed
+   else
+   echo $ip ping failed
+   fi
+done

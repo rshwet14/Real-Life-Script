@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Author: Shwet Raj
+#Date: 21/10/20
+#description: Script for creating multiple files
+#Modified: 21/10/20
+
+echo How many files do you want to create?
+
+read t
+
+echo File name should start with?
+
+read n
+
+for i in $(seq 1 $t)
+
+do 
+
+   touch $n.$i
+
+done
