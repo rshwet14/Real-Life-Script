@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 23/10/20
+# Description: This Script will create a new user.
+
+
+echo "Please enter username:"
+read u
+echo
+
+useradd $u
+echo
+echo "$u user has been created!"
+

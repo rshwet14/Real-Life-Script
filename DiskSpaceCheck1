@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 25/10/20
+# Description: This script will check the disk space greater than 60%.
+# Modified: 25/10/20
+
+echo
+echo Following is the disk space status
+echo
+
+# awk only those rows with the values
+
+df -h | awk '0+$5 >= 10 {print}' | awk '{print $5, $6}'

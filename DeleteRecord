@@ -1,0 +1,19 @@
+#!/bin/bash
+# Author: Shwet Raj
+# Date: 25/10/20
+# Description: This script will delete record from our system inventory
+# Modified: 25/10/20
+
+echo Please enter hostname or IP address?
+read host
+echo
+
+     grep -q $host /home/shwetraj/Real-Life-Scripts/database
+     if [ $? -eq 0 ]
+     then
+     echo
+     sed -i '/' $host '/d' /home/shwetraj/Real-Life-Scripts/database
+     echo $host has been deleted
+     else
+     echo Record does not exist
+     fi

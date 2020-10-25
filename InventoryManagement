@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 25/10/20
+# Description: This Script will add or delete record from system inventory.
+# Modified: 25/10/20
+
+clear
+echo
+
+echo Please select one of the following options:
+echo
+echo 'a = Add a record'
+echo 'd = Delete a record'
+echo
+
+        read choice
+
+                case $choice in
+a) /home/shwetraj/Real-Life-Scripts/AddRecord;;
+b) /home/shwetraj/Real-Life-Scripts/DeleteRecord;;
+*) echo Invalid choice - Bye.
+
+                esac
+
+

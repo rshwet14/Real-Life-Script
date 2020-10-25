@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 25/10/2020
+# Description: This script will disable the user who has not been logged in a while using xargs.
+# Modified: 25/10/2020
+
+lastlog -b 90 | tail -n+2 | grep 'Roy' | awk '{print $1}' | xargs -I{} usermod -L {}

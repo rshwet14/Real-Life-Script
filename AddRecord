@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Author: Shwet Raj
+# Date: 25/10/20
+# Description: This script will add record to our system inventory.
+# Modified: 25/10/20
+echo please enter hostname?
+read host
+echo
+
+
+       grep -q $host /home/shwetraj/Real-Life-Scripts/database
+       if [ $? -eq 0 ]
+       then
+       echo ERROR -- Hostname $host already exist
+       echo
+       exit 0
+       fi
+
+echo Please enter IP address?
+read IP
+echo
+
+
+       grep -q $IP /home/shwetraj/Real-Life-Scripts/database
+       if [ $? -eq 0 ]
+       then
+       echo ERROR -- IP $IP already  exist
+       echo
+       exit 0
+       fi
+
+echo Please enter Description?
+read description
+echo
+
+echo $host $IP $description `date` >> database
